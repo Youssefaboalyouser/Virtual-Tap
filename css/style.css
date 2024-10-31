@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dad3f8;
+}
+
+a {
+    /* text-decoration: none;
+    color: #000; */
+    all: unset;
+}
+
+.container {
+    background-color: #fff;
+    padding: 40px 50px 40px 40px;
+    border-radius: 12px;
+    max-width: 950px;
+    width: 100%;
+    margin: 0px 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container .main-title {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.lists {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    position: relative;
+    margin-right: 50px;
+}
+
+.content .lists label {
+    height: 60px;
+    font-size: 22px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 12px;
+    line-height: 60px;
+    padding-left: 25px;
+    color: #333;
+    z-index: 12;
+    transition: all 0.4s ease;
+}
+
+.content .lists label:hover {
+    color: #dad3f8;
+}
+
+#home:checked~.lists .Home,
+#blog:checked~.lists .Blog,
+#help:checked~.lists .Help,
+#code:checked~.lists .Code,
+#about:checked~.lists .About {
+    color: #fff;
+}
+
+.container .indecator {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #6d50e2;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+#home:checked~.lists .indecator {
+    top: 0px;
+}
+
+#blog:checked~.lists .indecator {
+    top: 60px;
+}
+
+#help:checked~.lists .indecator {
+    top: 120px;
+}
+
+#code:checked~.lists .indecator {
+    top: 180px;
+}
+
+#about:checked~.lists .indecator {
+    top: 240px;
+}
+
+.container input[type=radio] {
+    display: none;
+}
+
+.container .content .text-content {
+    width: 80%;
+    height: 100%;
+
+}
+
+.content .text-content p {
+    text-align: justify;
+}
+
+.content .text-content .title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.content .text-content .text {
+    display: none;
+}
+
+.content .text-content .home {
+    display: block;
+}
+
+#home:checked~.text-content .home,
+#blog:checked~.text-content .blog,
+#help:checked~.text-content .help,
+#code:checked~.text-content .code,
+#about:checked~.text-content .about {
+    display: block;
+}
+
+#blog:checked~.text-content .home,
+#help:checked~.text-content .home,
+#code:checked~.text-content .home,
+#about:checked~.text-content .home {
+    display: none;
+}
